@@ -3,30 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoundForge 2026 | Official Band Competition</title>
+    <title>SoundForge 2026 | Make a Legacy</title>
+    <!-- Import Font Google untuk kesan Poster Konser & Esports Modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
-        /* --- RESET & GLOBAL STYLES --- */
+        /* --- RESET & GLOBAL STYLES (60% Warna Dasar Hitam Pekat) --- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #0b0b0d;
-            color: #e2e8f0;
+            background-color: #0d0d0d;
+            color: #ffffff; /* Font Putih */
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
         }
 
+        /* --- AKSEN WARNA KUNING (10%) --- */
+        .text-yellow {
+            color: #ffcc00 !important;
+        }
+
         a {
-            color: #ff0055;
+            color: #ffcc00;
             text-decoration: none;
             transition: 0.3s;
         }
 
         a:hover {
-            color: #ff5599;
+            color: #ffea00;
         }
 
         .container {
@@ -38,8 +48,8 @@
 
         /* --- NAVIGATION --- */
         header {
-            background-color: #121216;
-            border-bottom: 2px solid #ff0055;
+            background-color: #000000;
+            border-bottom: 3px solid #ffcc00;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -52,15 +62,31 @@
             padding: 1rem 0;
         }
 
+        /* Gaya Font Logo: Bebas Neue (Bersih & Elegan / Poster Konser) */
+        .logo-wrapper {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            color: #ffffff;
         }
 
         .logo span {
-            color: #ff0055;
+            color: #ffcc00;
+        }
+
+        .tagline-sub {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: #aaaaaa;
+            text-transform: uppercase;
+            margin-top: 2px;
         }
 
         nav ul {
@@ -73,85 +99,91 @@
         }
 
         nav ul li a {
-            color: #a0aec0;
-            font-weight: 600;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #cccccc;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
         nav ul li a:hover {
-            color: #fff;
+            color: #ffcc00;
         }
 
         /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(rgba(11, 11, 13, 0.8), rgba(11, 11, 13, 0.95)), 
+            background: linear-gradient(rgba(13, 13, 13, 0.75), rgba(13, 13, 13, 0.98)), 
                         url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200') no-repeat center center/cover;
-            padding: 8rem 0;
+            padding: 10rem 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            letter-spacing: 3px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5rem;
+            letter-spacing: 4px;
             margin-bottom: 1rem;
             text-transform: uppercase;
+            line-height: 0.95;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #a0aec0;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            color: #dddddd;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .btn {
             display: inline-block;
-            background-color: #ff0055;
-            color: #fff;
-            padding: 0.8rem 2rem;
+            background-color: #ffcc00;
+            color: #000000; /* Tulisan hitam di tombol agar kontras */
+            padding: 0.8rem 2.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 0px; /* Box tajam ala industrial/esports */
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border: none;
+            border: 2px solid #ffcc00;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .btn:hover {
-            background-color: #e6004c;
-            transform: translateY(-2px);
-            color: #fff;
+            background-color: transparent;
+            color: #ffcc00;
+            transform: scale(1.05);
         }
 
-        /* --- CONCEPT SECTION --- */
+        /* --- SECTION FORMATTING --- */
         .section {
-            padding: 5rem 0;
-            border-bottom: 1px solid #1a1a24;
+            padding: 6rem 0;
+            border-bottom: 1px solid #222222;
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 2px;
             text-align: center;
             margin-bottom: 3rem;
             text-transform: uppercase;
-            position: relative;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background-color: #ff0055;
-            margin: 10px auto 0 auto;
+        .section-title span {
+            color: #ffcc00;
         }
 
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
@@ -163,99 +195,110 @@
         }
 
         .step-card {
-            background-color: #121216;
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
-            border-top: 4px solid #ff0055;
+            background-color: #000000;
+            padding: 3rem 2rem;
+            border: 1px solid #222222;
+            border-top: 4px solid #ffcc00;
             text-align: center;
         }
 
         .step-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #ff0055;
-            margin-bottom: 1rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: #ffcc00;
+            margin-bottom: 0.5rem;
         }
 
         .step-card h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 1rem;
+        }
+
+        .step-card p {
+            color: #cccccc;
+            font-size: 0.95rem;
         }
 
         .reg-action {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
 
-        /* --- ARCHIVE SECTION --- */
+        /* --- ARCHIVE TABLE --- */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 2rem;
-            background-color: #121216;
-            border-radius: 8px;
-            overflow: hidden;
+            background-color: #000000;
+            border: 1px solid #222222;
         }
 
         th, td {
-            padding: 1rem 1.5rem;
+            padding: 1.2rem 1.5rem;
             text-align: left;
         }
 
         th {
-            background-color: #1a1a24;
-            color: #ff0055;
+            background-color: #111111;
+            color: #ffcc00;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.2rem;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
+            border-bottom: 2px solid #ffcc00;
         }
 
-        tr {
-            border-bottom: 1px solid #1a1a24;
-        }
-
-        tr:last-child {
-            border-bottom: none;
+        td {
+            font-size: 1rem;
+            border-bottom: 1px solid #222222;
         }
 
         tr:hover {
-            background-color: #16161f;
+            background-color: #111111;
         }
 
         /* --- FOOTER --- */
         footer {
-            background-color: #070709;
+            background-color: #000000;
             text-align: center;
-            padding: 2rem 0;
-            color: #4a5568;
+            padding: 3rem 0;
+            color: #666666;
             font-size: 0.9rem;
-            border-top: 1px solid #1a1a24;
+            border-top: 2px solid #222222;
         }
 
         /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
             }
             nav ul li {
                 margin: 0 1rem;
             }
             .grid-2 {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 2.5rem;
             }
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGASI -->
+    <!-- NAVIGASI UTAMA -->
     <header>
         <div class="container nav-container">
-            <div class="logo">SOUND<span>FORGE</span></div>
+            <div class="logo-wrapper">
+                <div class="logo">SOUND<span>FORGE</span></div>
+                <div class="tagline-sub">Make a Legacy</div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#konsep">Konsep</a></li>
@@ -269,8 +312,8 @@
     <!-- HERO BANNER -->
     <section class="hero">
         <div class="container">
-            <h1>Tempa Karakter Bandmu</h1>
-            <p>Kompetisi band indie terbesar tahun ini. Saatnya menunjukkan distorsi, harmoni, dan aksi panggung terbaikmu di hadapan para produser musik nasional.</p>
+            <h1>all genre, all style, one stage</h1>
+            <p>Bawa karya terbaikmu, dan ciptakan penampilan yang layak dikenang.</p>
             <a href="#pendaftaran" class="btn">Daftar Sekarang</a>
         </div>
     </section>
@@ -278,23 +321,23 @@
     <!-- KONSEP EVENT -->
     <section id="konsep" class="section">
         <div class="container">
-            <h2 class="section-title">Konsep SoundForge</h2>
+            <h2 class="section-title">Konsep <span>SoundForge</span></h2>
             <div class="grid-2">
                 <div>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-                        <strong>SoundForge</strong> bukan sekadar festival musik biasa. Ini adalah wadah pencarian bakat bagi band-band lokal untuk "ditempa" menjadi unit musik yang solid, profesional, dan siap industri.
+                    <p style="font-size: 1.2rem; margin-bottom: 1.5rem; font-weight: 600;">
+                        SoundForge bukan sekadar festival musik biasa. Ini adalah ruang penempaan bagi band yang siap mengukir sejarah baru di industri musik.
                     </p>
-                    <p style="color: #a0aec0;">
-                        Kami percaya bahwa setiap band memiliki identitas unik. Di SoundForge, penilaian tidak hanya diambil dari kelihaian bermain instrumen, namun juga originalitas lagu, aksi panggung (*stage act*), serta kedalaman lirik. Genre terbuka lebar bagi unit Rock, Metal, Pop, Jazz, hingga Elektronik.
+                    <p style="color: #cccccc;">
+                        Kami percaya kebebasan berekspresi adalah kunci. Di panggung ini, penilaian tidak dibatasi oleh sekat-sekat genre, melainkan orisinalitas, karakter penampilan, kedalaman lirik, serta energi yang dilepaskan di atas panggung.
                     </p>
                 </div>
-                <div style="background-color: #121216; padding: 2rem; border-radius: 8px; border-left: 4px solid #ff0055;">
-                    <h3 style="margin-bottom: 1rem; color: #fff;">Yang Kamu Dapatkan:</h3>
-                    <ul style="list-style-position: inside; color: #a0aec0;">
-                        <li style="margin-bottom: 0.5rem;">Kontrak Rekaman Single Digital</li>
-                        <li style="margin-bottom: 0.5rem;">Hadiah Tunai Total Puluhan Juta Rupiah</li>
-                        <li style="margin-bottom: 0.5rem;">Sesi Mentoring Bersama Musisi Senior</li>
-                        <li style="margin-bottom: 0.5rem;">Slot Tampil di Festival SoundForge Utama</li>
+                <div style="background-color: #000000; padding: 2.5rem; border: 1px solid #222222; border-left: 4px solid #ffcc00;">
+                    <h3 style="margin-bottom: 1.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; text-transform: uppercase; letter-spacing: 1px;">Benefit Kompetisi:</h3>
+                    <ul style="list-style-position: inside; color: #cccccc; line-height: 2;">
+                        <li><span class="text-yellow">✔</span> Kontrak Rekaman Single Digital</li>
+                        <li><span class="text-yellow">✔</span> Hadiah Tunai Total Puluhan Juta Rupiah</li>
+                        <li><span class="text-yellow">✔</span> Eksklusif Mentoring Bersama Musisi Nasional</li>
+                        <li><span class="text-yellow">✔</span> Main Slot di Festival Utama SoundForge</li>
                     </ul>
                 </div>
             </div>
@@ -304,26 +347,25 @@
     <!-- PENDAFTARAN -->
     <section id="pendaftaran" class="section">
         <div class="container">
-            <h2 class="section-title">Alur Pendaftaran</h2>
+            <h2 class="section-title">Alur <span>Pendaftaran</span></h2>
             <div class="reg-steps">
                 <div class="step-card">
                     <div class="step-number">01</div>
                     <h3>Unduh Regulasi</h3>
-                    <p style="color: #a0aec0; font-size: 0.95rem;">Pelajari booklet syarat, ketentuan lagu orisinal/cover, dan detail teknis kompetisi.</p>
+                    <p>Pelajari panduan lengkap kompetisi, persyaratan aransemen lagu, serta ketentuan teknis lainnya.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">02</div>
                     <h3>Kirim Demo</h3>
-                    <p style="color: #a0aec0; font-size: 0.95rem;">Unggah 1 video live perform band Anda ke YouTube (Unlisted/Public) sebagai materi seleksi awal.</p>
+                    <p>Unggah 1 video rekaman penampilan live terbaik band Anda ke platform YouTube (Unlisted/Public).</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">03</div>
                     <h3>Isi Formulir</h3>
-                    <p style="color: #a0aec0; font-size: 0.95rem;">Lengkapi data anggota band dan sematkan link video demo pada tombol pendaftaran di bawah.</p>
+                    <p>Lengkapi data seluruh personil band serta cantumkan tautan video demo Anda pada formulir resmi.</p>
                 </div>
             </div>
             <div class="reg-action">
-                <!-- Ganti tanda pagar (#) di bawah dengan link Google Form pendaftaran Anda jika ada -->
                 <a href="#" class="btn" target="_blank">Buka Formulir Pendaftaran</a>
             </div>
         </div>
@@ -332,15 +374,15 @@
     <!-- ARSIP EVENT -->
     <section id="arsip" class="section">
         <div class="container">
-            <h2 class="section-title">Catatan Arsip Event</h2>
-            <p style="text-align: center; color: #a0aec0; max-width: 600px; margin: -2rem auto 2rem auto;">Perjalanan SoundForge dari tahun ke tahun melahirkan jawara baru yang kini meramaikan industri musik tanah air.</p>
+            <h2 class="section-title">Catatan <span>Arsip Event</span></h2>
+            <p style="text-align: center; color: #cccccc; max-width: 600px; margin: -2rem auto 3rem auto; font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; letter-spacing: 0.5px;">Rekam jejak para juara dari edisi terdahulu yang kini telah merajai panggung industri musik.</p>
             
             <div style="overflow-x: auto;">
                 <table>
                     <thead>
                         <tr>
                             <th>Tahun</th>
-                            <th>Juara 1</th>
+                            <th>Jawara 1</th>
                             <th>Genre</th>
                             <th>Kota Asal</th>
                             <th>Status Sekarang</th>
@@ -349,21 +391,21 @@
                     <tbody>
                         <tr>
                             <td>2025</td>
-                            <td><strong>Distorsi Senja</strong></td>
+                            <td style="font-weight: bold; color: #ffcc00;">Distorsi Senja</td>
                             <td>Alternative Rock</td>
                             <td>Bandung</td>
                             <td>Tur Album Pertama</td>
                         </tr>
                         <tr>
                             <td>2024</td>
-                            <td><strong>Iron Pulse</strong></td>
+                            <td style="font-weight: bold; color: #ffcc00;">Iron Pulse</td>
                             <td>Heavy Metal</td>
                             <td>Jakarta</td>
-                            <td>Aktif di Spotify</td>
+                            <td>Aktif di Platform Digital</td>
                         </tr>
                         <tr>
                             <td>2023</td>
-                            <td><strong>The Midnight Echo</strong></td>
+                            <td style="font-weight: bold; color: #ffcc00;">The Midnight Echo</td>
                             <td>Indie Pop</td>
                             <td>Yogyakarta</td>
                             <td>Kontrak Label Nasional</td>
@@ -377,8 +419,8 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 SoundForge Music Official. All Rights Reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Dibuat dengan semangat independen.</p>
+            <p style="font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 1px; color: #ffffff;">&copy; 2026 SOUNDFORGE MUSIC OFFICIAL. ALL RIGHTS RESERVED.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #555555; letter-spacing: 2px; text-transform: uppercase;">Make a Legacy</p>
         </div>
     </footer>
 
